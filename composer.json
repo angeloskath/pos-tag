@@ -1,0 +1,11 @@
+{
+	"require": {
+		"nlp-tools/nlp-tools": "1.*@dev",
+		"symfony/console": "2.3"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "src/"
+		}
+	}
+}
