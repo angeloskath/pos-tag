@@ -26,3 +26,8 @@ In order to do what is shown above in the usage example a pre build model for th
 language is required. Prebuilt models will be provided at the final blog post of the
 aforementioned series.
 
+License
+-------
+
+The contents of this repository are all published under the license present in the LICENSE file.
+
