@@ -45,10 +45,10 @@ replaced with the token, tag, new line respectively.
 
 Examples:
 
-./post tag -m greek.bin 'Η καλή μας αγελάδα βόσκει κάτω στην λιακάδα'
+./pos-tag tag -m greek.bin 'Η καλή μας αγελάδα βόσκει κάτω στην λιακάδα'
 Η/article καλή/adjective μας/pronoun αγελάδα/noun βόσκει/verb κάτω/adverb στην/article λιακάδα/noun 
 
-./post tag -o '<t> ' 'Η καλή μας αγελάδα βόσκει κάτω στην λιακάδα'
+./pos-tag tag -o '<t> ' 'Η καλή μας αγελάδα βόσκει κάτω στην λιακάδα'
 article adjective pronoun noun verb adverb article noun 
 ");
 	}
@@ -67,8 +67,12 @@ article adjective pronoun noun verb adverb article noun
 			$model = "model.bin";
 
 		// oops! couldn't find it or read it
-		if (!file_exists($model) || !is_readable($model))
-			throw new \RuntimeException("Could not locate or read the model file");
+		if (!file_exists($model) || !is_readable($model)) {
+			$model = getcwd().DIRECTORY_SEPARATOR.$model;
+			if (!file_exists($model) || !is_readable($model)) {
+				throw new \RuntimeException("Could not locate or read the model file");
+			}
+		}
 
 		// this will throw an exception if the unserialized model is not
 		// an instance of Maxent
