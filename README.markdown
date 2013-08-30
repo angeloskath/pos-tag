@@ -16,15 +16,20 @@ Usage
 Installation
 ------------
 
-Simply download the zip and install with composer. Alternatively a phar archive will be
-provided at the final blog post of the aforementioned series.
+Simply download the zip and install with composer. Alternatively you can download a
+[phar archive](http://php-nlp-tools.com/files/pos-tag/pos-tag.phar).
 
 Prebuilt Models
 ---------------
 
-In order to do what is shown above in the usage example a pre build model for the greek
-language is required. Prebuilt models will be provided at the final blog post of the
-aforementioned series.
+In order to do what is shown above in the usage example a pre built model for the greek
+language is required. You can use any of the following models and you can read more about their usage
+[here](http://php-nlp-tools.com/posts/pos-tag-application.html).
+
+* [model.bin (complete)](/files/pos-tag/models/model.bin)
+* [model_thre_0.09.bin](/files/pos-tag/models/model_thre_0.09.bin)
+* [model_thre_0.49.bin (recommended)](/files/pos-tag/models/model_thre_0.49.bin)
+* [model_thre_0.99.bin](/files/pos-tag/models/model_thre_0.99.bin)
 
 License
 -------
